@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Silly Clock</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			color: white;
+			cursor: default;
+		}
+		.wrapper {
+			height: 100%;
+			width: 50%;
+			margin: -100px 0px;
+			padding: 0px;
+		}
+		.clock-container {
+			margin: 0px;
+			-webkit-app-region: drag;
+		}
+		.time {
+			font-size: 260px;
+			text-shadow: 5px 10px 5px black;
+			margin: auto;
+			padding: 0px;
+			position: absolute;
+			-webkit-app-region: drag;
+		}
+		.noons {
+			font-size: 100px;
+			-webkit-app-region: drag;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper" class="wrapper">
+		<div id="clock-container" class="clock-container">
+			<span id="time" class="time"><span id="hours">12</span><span id="divider" class="divider">:</span><span id="minutes" class="minutes">00</span> <span id="noons" class="noons">pm</span></span>
+		</div>
+	</div>
+	<script src="./renderer.js" async></script>
+</body>
+</html>
