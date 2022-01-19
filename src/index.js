@@ -14,10 +14,15 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 960,
     height: 270,
-	transparent: true,
 	frame: false,
+	transparent: true,
 	resizable: false,
-	hasShadow: false
+	hasShadow: false,
+	maximizable: false,
+	focusable: true,
+	fullscreenable: false,
+	skipTaskbar: true,
+	title: "Silly Clock"
   });
 
   // and load the index.html of the app.
@@ -33,6 +38,7 @@ const createWindow = () => {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+
 };
 
 // This method will be called when Electron has finished
