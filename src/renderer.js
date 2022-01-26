@@ -74,7 +74,7 @@ clockHours.onclick = function (e) {
 	}
 };
 
-settingsIcon.onclick = function () {
+settingsIcon.addEventListener("click", function () {
 	if(popup.style.getPropertyValue("display") == "" || popup.style.getPropertyValue("display") == "none") {
 		popup.style.setProperty("display", "inline");
 		clock.style.setProperty("filter", "blur(3px)");
@@ -82,7 +82,11 @@ settingsIcon.onclick = function () {
 		popup.style.setProperty("display", "");
 		clock.style.setProperty("filter", "blur(0px)");
 	}
-};
+});
+
+/*settingsIcon.addEventListener("click", function () {
+	const settingsWindow = window.open("settings.html", "_blank");
+})*/
 
 window.addEventListener("click", e => {
 	if(popup.style.getPropertyValue("display") == "inline") {
